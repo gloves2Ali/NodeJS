@@ -1,0 +1,14 @@
+{
+  "name": "node-20171031",
+  "version": "1.0.0",
+  "description": "",
+  "main": "helloword.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
