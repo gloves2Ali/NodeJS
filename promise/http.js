@@ -47,14 +47,18 @@ var promiseHttp = {
 }
 
 // 使用 async await强行同步
-function awaitHttp(url) {
-    return axios.get(url)
+var awaitHttp = function(url) {
+    return new Promise((resolve,reject)=>{
+        axios.get(url)
         .then((res)=>{
             console.log("res",res.data);
+            resolve();
         })
         .catch((err)=>{
             console.log("err",err);
+            reject();
         })
+    });
 }
 
 

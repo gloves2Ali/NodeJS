@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            function initArray(m,n){
+                var arr = [];
+                (function b(m,n){
+                    if(m<=0){
+                        return arr;
+                    }else{
+                        arr.push(n);
+                        return arguments.callee(m-1,n);
+                    }
+                })(m,n);
+            }
+            // 目标输出[3 3 3 ..... 3]
+            console.log("aaa:",initArray(10,3));
+        </script>
+    </body>
+</html>
